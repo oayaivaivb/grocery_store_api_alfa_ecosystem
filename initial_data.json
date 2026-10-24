@@ -1,0 +1,25 @@
+[
+  {"model": "catalog.category", "pk": 1, "fields": {"name": "Молочные продукты", "slug": "molochnye-produkty", "image": "categories/molochnye-produkty.jpg"}},
+  {"model": "catalog.category", "pk": 2, "fields": {"name": "Овощи и фрукты", "slug": "ovoshchi-i-frukty", "image": "categories/ovoshchi-i-frukty.jpg"}},
+  {"model": "catalog.category", "pk": 3, "fields": {"name": "Хлеб и выпечка", "slug": "hleb-i-vypechka", "image": "categories/hleb-i-vypechka.jpg"}},
+
+  {"model": "catalog.subcategory", "pk": 1, "fields": {"category": 1, "name": "Сыры", "slug": "syry", "image": "subcategories/syry.jpg"}},
+  {"model": "catalog.subcategory", "pk": 2, "fields": {"category": 1, "name": "Молоко и кефир", "slug": "moloko-i-kefir", "image": "subcategories/moloko-i-kefir.jpg"}},
+  {"model": "catalog.subcategory", "pk": 3, "fields": {"category": 2, "name": "Овощи", "slug": "ovoshchi", "image": "subcategories/ovoshchi.jpg"}},
+  {"model": "catalog.subcategory", "pk": 4, "fields": {"category": 2, "name": "Фрукты", "slug": "frukty", "image": "subcategories/frukty.jpg"}},
+  {"model": "catalog.subcategory", "pk": 5, "fields": {"category": 3, "name": "Хлеб", "slug": "hleb", "image": "subcategories/hleb.jpg"}},
+  {"model": "catalog.subcategory", "pk": 6, "fields": {"category": 3, "name": "Выпечка", "slug": "vypechka", "image": "subcategories/vypechka.jpg"}},
+
+  {"model": "catalog.product", "pk": 1, "fields": {"subcategory": 1, "name": "Сыр Гауда", "slug": "syr-gauda", "price": "450.00", "image": "products/syr-gauda.jpg"}},
+  {"model": "catalog.product", "pk": 2, "fields": {"subcategory": 1, "name": "Сыр Российский", "slug": "syr-rossiyskiy", "price": "390.00", "image": "products/syr-rossiyskiy.jpg"}},
+  {"model": "catalog.product", "pk": 3, "fields": {"subcategory": 2, "name": "Молоко 3.2%", "slug": "moloko-3-2", "price": "85.50", "image": "products/moloko-3-2.jpg"}},
+  {"model": "catalog.product", "pk": 4, "fields": {"subcategory": 2, "name": "Кефир 1%", "slug": "kefir-1", "price": "72.00", "image": "products/kefir-1.jpg"}},
+  {"model": "catalog.product", "pk": 5, "fields": {"subcategory": 3, "name": "Помидоры", "slug": "pomidory", "price": "210.00", "image": "products/pomidory.jpg"}},
+  {"model": "catalog.product", "pk": 6, "fields": {"subcategory": 3, "name": "Огурцы", "slug": "ogurtsy", "price": "150.00", "image": "products/ogurtsy.jpg"}},
+  {"model": "catalog.product", "pk": 7, "fields": {"subcategory": 4, "name": "Яблоки", "slug": "yabloki", "price": "120.00", "image": "products/yabloki.jpg"}},
+  {"model": "catalog.product", "pk": 8, "fields": {"subcategory": 4, "name": "Бананы", "slug": "banany", "price": "99.90", "image": "products/banany.jpg"}},
+  {"model": "catalog.product", "pk": 9, "fields": {"subcategory": 5, "name": "Хлеб белый", "slug": "hleb-belyy", "price": "55.00", "image": "products/hleb-belyy.jpg"}},
+  {"model": "catalog.product", "pk": 10, "fields": {"subcategory": 5, "name": "Хлеб ржаной", "slug": "hleb-rzhanoy", "price": "62.00", "image": "products/hleb-rzhanoy.jpg"}},
+  {"model": "catalog.product", "pk": 11, "fields": {"subcategory": 6, "name": "Круассан", "slug": "kruassan", "price": "75.00", "image": "products/kruassan.jpg"}},
+  {"model": "catalog.product", "pk": 12, "fields": {"subcategory": 6, "name": "Булочка с маком", "slug": "bulochka-s-makom", "price": "48.00", "image": "products/bulochka-s-makom.jpg"}}
+]

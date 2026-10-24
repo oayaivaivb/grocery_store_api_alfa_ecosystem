@@ -1,0 +1,20 @@
+# Окружение
+venv/
+.env
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# База данных
+db.sqlite3
+
+# Кэш картинок imagekit (создаётся сам)
+media/CACHE/
+
+# Редакторы и система
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
