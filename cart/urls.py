@@ -1,8 +1,16 @@
+"""URL-маршруты корзины.
+
+Эндпоинты:
+  /cart/              — GET состав / DELETE очистить
+  /cart/items/        — POST добавить
+  /cart/items/<id>/   — PATCH изменить / DELETE удалить
+"""
+
 from django.urls import path
 from .views import CartView, CartItemAddView, CartItemDetailView
 
 urlpatterns = [
-    path('cart/', CartView.as_view(), name='cart'),
-    path('cart/items/', CartItemAddView.as_view(), name='cart-item-add'),
-    path('cart/items/<int:pk>/', CartItemDetailView.as_view(), name='cart-item-detail'),
+    path("cart/", CartView.as_view(), name="cart"),
+    path("cart/items/", CartItemAddView.as_view(), name="cart-item-add"),
+    path("cart/items/<int:pk>/", CartItemDetailView.as_view(), name="cart-item-detail"),
 ]

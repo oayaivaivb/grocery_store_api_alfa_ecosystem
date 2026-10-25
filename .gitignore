@@ -6,6 +6,7 @@ venv/
 __pycache__/
 *.pyc
 .pytest_cache/
+.mypy_cache
 
 # База данных
 db.sqlite3
@@ -18,3 +19,4 @@ media/CACHE/
 .idea/
 .DS_Store
 Thumbs.db
+.pre-commit-config.yaml

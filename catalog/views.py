@@ -4,12 +4,23 @@ from .serializers import CategorySerializer, ProductSerializer
 
 
 class CategoryViewSet(viewsets.ReadOnlyModelViewSet):
-    queryset = Category.objects.prefetch_related('subcategories').all()
+    """Только чтение: список категорий с вложенными подкатегориями.
+
+    prefetch_related загружает подкатегории отдельным запросом, чтобы избежать N+1.
+    """
+
+    queryset = Category.objects.prefetch_related("subcategories").all()
     serializer_class = CategorySerializer
-    lookup_field = 'slug'
+    lookup_field = "slug"
 
 
 class ProductViewSet(viewsets.ReadOnlyModelViewSet):
-    queryset = Product.objects.select_related('subcategory__category').all()
+    """Только чтение: список продуктов и детальный просмотр по slug.
+
+    select_related делает JOIN по subcategory→category, чтобы не делать доп. запрос
+    при доступе к product.subcategory.category.
+    """
+
+    queryset = Product.objects.select_related("subcategory__category").all()
     serializer_class = ProductSerializer
-    lookup_field = 'slug'
+    lookup_field = "slug"
